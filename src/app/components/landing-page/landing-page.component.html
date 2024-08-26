@@ -1,4 +1,69 @@
-<button routerLink="../auctions">view auctions</button>
-<button routerLink="../signup">sign up</button>
-<button routerLink="../login">login</button>
-<button routerLink="../create-auction">create auction</button>
+<mat-toolbar class="toolbar">
+    <span>BidNexus</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="../auctions">View Auctions</button>
+    <button mat-button routerLink="../signup">Sign Up</button>
+    <button mat-button routerLink="../login">Login</button>
+    <button mat-button routerLink="../create-auction">Create Auction</button>
+  </mat-toolbar>
+  
+  <div class="banner">
+    <div class="banner-text">
+      <h1 class="banner-heading">Discover Exclusive Auctions</h1>
+      <p class="banner-subheading">Bid on Unique Items and Rare Collectibles</p>
+    </div>
+  </div>
+  
+  <section class="upcoming-auctions">
+    <h2>Upcoming Auctions</h2>
+    <div class="auction-cards">
+      <mat-card *ngFor="let auction of upcomingAuctions" class="auction-card">
+        <img mat-card-image [src]="auction.image" alt="{{ auction.title }}" />
+        <mat-card-title>{{ auction.title }}</mat-card-title>
+      </mat-card>
+    </div>
+  </section>
+  
+  <section class="about-us">
+    <div class="about-us-content">
+      <h2 class="about-us-heading">About Us</h2>
+      <div class="about-us-description">
+        <p class="line line-1">
+          Welcome to BidNexus, where auctions meet excellence.
+        </p>
+        <p class="line line-2">
+          Our platform is designed to bring together sellers and buyers of unique
+          and valuable items.
+        </p>
+        <p class="line line-3">
+          From rare collectibles to exquisite art, discover it all here and engage
+          in thrilling bidding experiences.
+        </p>
+        <p class="line line-4">
+          Join our community and be part of a dynamic marketplace dedicated to
+          quality and trust.
+        </p>
+      </div>
+      <button class="learn-more-button">Learn More</button>
+    </div>
+  </section>
+  
+  <footer>
+    <section class="footer-content">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Phone: +1 234 567 890</p>
+        <p>Address: 123 Auction Lane, Bid City</p>
+      </div>
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </section>
+    <div class="footer-bottom">
+      <p>&copy; 2024 BidNexus. All Rights Reserved.</p>
+    </div>
+  </footer>
+  

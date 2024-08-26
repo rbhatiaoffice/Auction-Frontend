@@ -1,0 +1,237 @@
+:host {
+    display: block;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    min-height: 100vh;
+    font-family: 'Lora', serif;
+  }
+  
+  .toolbar {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a00); /* Updated gradient colors */
+    color: white;
+    font-weight: 600;
+  }
+  
+  .toolbar button {
+    color: white; /* Ensures button text is readable against the header background */
+  }
+  
+  .toolbar button:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover for better contrast */
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .banner {
+    padding: 20px;
+    color: white;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ), url('/law-justice-converge-antique-gavel-generative-ai.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Adjust this value as needed */
+    height: 50vh; /* Adjust this value as needed to cover 50% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure no overflow of animations */
+  }
+  
+  .banner-text {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .banner-heading {
+    margin: 0;
+    animation: fadeInUp 2s ease-out forwards;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .banner-subheading {
+    margin: 10px 0 0;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+    animation-delay: 2s; /* Delay to start after heading animation completes */
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .upcoming-auctions {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  }
+  
+  .upcoming-auctions h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .auction-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .auction-card {
+    width: calc(33.333% - 20px);
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .auction-card img {
+    max-height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .about-us {
+    width: 100%;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #c7a89b, #e6d2c1); /* Lighter wooden color gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-us-content {
+    max-width: 1000px; /* Width for better spacing */
+    padding: 40px;
+    background: linear-gradient(135deg, #fdf6f0, #e6d2c1); /* Subtle beige gradient for content */
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-us-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50; /* Darker color for better contrast */
+    margin: 0;
+    animation: fadeInUp 4s ease-in-out infinite; /* Slowed down animation */
+  }
+  
+  .about-us-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #34495e; /* Slightly lighter color for text */
+    line-height: 1.8;
+    margin: 20px 0;
+  }
+  
+  .line {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 4s ease-in-out infinite; /* Slowed down animation */
+  }
+  
+  .line-1 {
+    animation-delay: 0s;
+  }
+  
+  .line-2 {
+    animation-delay: 1s;
+  }
+  
+  .line-3 {
+    animation-delay: 2s;
+  }
+  
+  .line-4 {
+    animation-delay: 3s;
+  }
+  
+  .learn-more-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #ff6a00; /* Orange color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .learn-more-button:hover {
+    background: #e55d00;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  footer {
+    background: linear-gradient(135deg, #6d4f40, #8c6e63);
+    color: #f5f5f5;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #6d4f40, #8c6e63); /* Footer gradient */
+    color: #f5deb3; /* Golden color for text */
+  }
+  
+  .footer-content .contact-info,
+  .footer-content .social-media {
+    flex: 1;
+  }
+  
+  .footer-content .social-media i {
+    font-size: 20px; /* Adjust this value to increase/decrease size */
+    color: #f5deb3; /* Golden color */
+    margin: 0 15px; /* Adjust this value to increase/decrease spacing */
+  }
+  
+  .footer-content .social-media mat-icon:hover {
+    color: #d1d1d1; /* Lighten on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #555;
+    color: #f5deb3; /* Golden color for text */
+  }
+  
