@@ -1,0 +1,66 @@
+/* Applying the linear gradient as the background color without removing the background image */
+:host {
+    display: block;
+    background: linear-gradient(135deg, #d8cfc4, #f2e9e1);
+    min-height: 100vh;
+  }
+  
+  .toolbar {
+    background: linear-gradient(135deg, #d8cfc4, #f2e9e1);
+    color: black;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .banner {
+    text-align: center;
+    padding: 60px 20px;
+    color: black;
+    background-image: url('/wood-law-rights-judge-hammer-wallpaper-thumb.jpg'); /* Keep your background image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .services {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #d8cfc4, #f2e9e1);
+  }
+  
+  mat-card {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-us {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #d8cfc4, #f2e9e1);
+  }
+  
+  footer {
+    background: linear-gradient(135deg, #6d4f40, #8c6e63);
+    color: #f5deb3 !important;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .footer-content .social-media mat-icon {
+    font-size: 36px;
+    margin: 0 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #555;
+    color: #f5deb3 !important;
+  }
+  

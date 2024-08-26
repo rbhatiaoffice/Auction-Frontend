@@ -1,4 +1,60 @@
-<button routerLink="../auctions">view auctions</button>
-<button routerLink="../signup">sign up</button>
-<button routerLink="../login">login</button>
-<button routerLink="../create-auction">create auction</button>
+<mat-toolbar class="toolbar">
+    <span>Auction Website</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="../auctions">View Auctions</button>
+    <button mat-button routerLink="../signup">Sign Up</button>
+    <button mat-button routerLink="../login">Login</button>
+    <button mat-button routerLink="../create-auction">Create Auction</button>
+  </mat-toolbar>
+  
+  <div class="banner">
+    <h1>Welcome to Auction Website</h1>
+    <p>Your best place to buy and sell unique items</p>
+  </div>
+  
+  <section class="services">
+    <mat-grid-list cols="4" rowHeight="fit" gutterSize="16px">
+      <mat-grid-tile *ngFor="let service of services">
+        <mat-card>
+          <mat-icon>{{service.icon}}</mat-icon>
+          <mat-card-title>{{service.title}}</mat-card-title>
+          <mat-card-content>{{service.description}}</mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </section>
+  
+  <section class="about-us">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>About Us</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>We offer a platform for you to auction your precious items and find rare collectibles.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Learn More</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+  
+  <footer>
+    <section class="footer-content">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <!-- <p>Email: info@auctionwebsite.com</p> -->
+        <p>Phone: +1 234 567 890</p>
+        <p>Address: 123 Auction Lane, Bid City</p>
+      </div>
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <mat-icon>facebook</mat-icon>
+        <mat-icon>twitter</mat-icon>
+        <mat-icon>instagram</mat-icon>
+      </div>
+    </section>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Auction Website. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
