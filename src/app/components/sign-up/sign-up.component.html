@@ -1,0 +1,145 @@
+<div class="signup-container">
+  <mat-card class="card-container">
+    <mat-grid-list cols="2" rowHeight="1:1">
+      <mat-grid-tile>
+        <img
+          src="/scales-wallpaper-preview.jpg"
+          alt="Signup Image"
+          class="login-image"
+        />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="form-container">
+          <form (ngSubmit)="onSubmit()">
+            <!-- Username Input -->
+            <div class="form-field">
+              <mat-icon matPrefix>person_outline</mat-icon>
+              <input
+                type="text"
+                placeholder="Username"
+                [(ngModel)]="signUpFormData.name"
+                name="name"
+                required
+              />
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-field">
+              <mat-icon matPrefix>mail_outline</mat-icon>
+              <input
+                type="email"
+                placeholder="Email"
+                [(ngModel)]="signUpFormData.email"
+                name="email"
+                required
+              />
+            </div>
+
+            <!-- Phone Input -->
+            <div class="form-field">
+              <mat-icon matPrefix>phone</mat-icon>
+              <input
+                type="tel"
+                placeholder="Phone"
+                [(ngModel)]="signUpFormData.phone"
+                name="phone"
+                required
+              />
+            </div>
+
+            <!-- Age Input -->
+            <div class="form-field">
+              <mat-icon matPrefix>accessibility_new</mat-icon>
+              <input
+                type="number"
+                placeholder="Age"
+                [(ngModel)]="signUpFormData.age"
+                name="age"
+                required
+              />
+            </div>
+
+            <!-- Gender Select -->
+            <!-- <mat-form-field appearance="outline" class="input-field">
+              <mat-icon matPrefix>group</mat-icon>
+              <mat-select
+                placeholder="Gender"
+                [(ngModel)]="signUpFormData.gender"
+                name="gender"
+                required
+              >
+                <mat-option value="0">Other</mat-option>
+                <mat-option value="1">Male</mat-option>
+                <mat-option value="2">Female</mat-option>
+              </mat-select>
+            </mat-form-field> -->
+
+            <!-- Address Input -->
+            <div class="form-field">
+              <mat-icon matPrefix>location_on</mat-icon>
+              <input
+                type="text"
+                placeholder="Location"
+                [(ngModel)]="signUpFormData.address"
+                name="address"
+                required
+              />
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-field password-field">
+              <mat-icon matPrefix>lock_outline</mat-icon>
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                placeholder="Password"
+                [(ngModel)]="signUpFormData.password"
+                name="password"
+                required
+              />
+              <button
+                class="password-toggle"
+                type="button"
+                (click)="togglePasswordVisibility()"
+              >
+                <mat-icon>{{
+                  showPassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </div>
+
+            <!-- Retype Password Input -->
+            <div class="form-field password-field">
+              <mat-icon matPrefix>lock_outline</mat-icon>
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                placeholder="Re-type Password"
+                [(ngModel)]="signUpFormData.retypePassword"
+                name="retypePassword"
+                required
+              />
+              <button
+                class="password-toggle"
+                type="button"
+                (click)="togglePasswordVisibility()"
+              >
+                <mat-icon>{{
+                  showPassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              class="submit-button"
+            >
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+</div>
